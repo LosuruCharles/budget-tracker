@@ -5,22 +5,67 @@ body
 	padding: 22px;
 }
 h1{
-	color:aqua;
+	color:blue;
 	text-align: center;
-	padding: 25px;
+	padding: 15px;
+	font-size: 70px;
+	border: 3px solid beige;
+	background-color:darkgray;
 	margin-bottom: 22px;
 }
-	.expense-section{
+	.expense-section {
 		background-color: #e8f5e9;
 		color:turquoise;
-		padding: 30px;
+		padding: 60px;
 		border-radius: 10px;
 	}
-	input {
+	select {
 		display: block;
-		width: 90%;
-		padding: 12px;
-		margin-top: 19px;
+		width: 30%;
+		padding: 10px;
+		margin-top: 10px;
 		border: 2px solid #ccc;
-		border-radius: 5px;
+		border-radius: 2px;
 	}
+
+/* Table-styling */
+table {
+	width: 80%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	padding: 20px
+}
+/* descendant selector */
+.expense-section td, .expense-section th {
+	border: 1px solid #bbb;
+	padding: 12px;
+	text-align: left;
+}
+.expense-section th {
+	background-color: green;
+	color: beige;
+}
+/* pseudo-class selector based on position: alternating row colors */
+.expense-section tr:nth-child(even) {
+	background-color:aqua;
+}
+.expense-section tbody tr:hover {
+	background-color:greenyellow;
+}
+/* focus state for input and select */
+input:focus,
+select:focus {
+	outline: none;
+	border-color: turquoise;
+	box-shadow: 0 0 4px turquoise;
+}
+button {
+	margin-top: 20px;
+	padding: 15px 25px;
+	border: none;
+	border-radius: 7px;
+	background-color: turquoise;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
