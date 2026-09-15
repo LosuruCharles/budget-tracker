@@ -4,23 +4,94 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>My Budget Tracker</h1>
+	<h1><img src="download.webp" width="50px" alt="Budget Tracker Logo">My Budget Tracker</h1>
 	<p>Track your income and expenses in one place.</p>
-		<section>
+	<details>
+		<summary>How to use this tracker</summary>
+		<p>Fill in the form below with the expense name, amount, category and date, then click "Add Expense" to log it. Your expenses will appear in the table under "Your expenses".</p>
+	</details>	
+	<section>
 		<h2>Add Expense</h2>
-	
+	<form> 
 		<label for="expense-name">Expense Name</label>
 		<input type="text" id="expense-name" placeholder="Expense name">
 	
-		<label for="expense-amount">Amount</label>
-		<input type="number" id="amount" placeholder="Enter amount">
+		<label for="expense-amount">Expense Amount</label>
+		<input type="number" id="expense-amount" placeholder="Enter amount">
 
-		<label for="category">Category</label>
-		<input type="text" id="category" placeholder="Enter category">
-	</section>
+		<label for="expense-category">Expense Category</label>
+		<select id="expense-category">
+			<option value="Food">Food</option>
+			<option value="Transport">Transport</option>
+			<option value="Entertainment">Entertainment</option>
+			<option value="Rent">Rent</option>
+			<option value="Other">Other</option>
+		</select>
+		<label for="date">Date</label>
+		<input type="date" id="date">
+		<button type="button" id="add-expense-btn">Add Expense</button>
+	</form>
+		</section>
 			<section>
 			<h2>Your expenses</h2>
-			<p>No expenses yet</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Amount</th>
+						<th>Category</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cereals and Groceries</td>
+						<td>15000</td>
+						<td>Food</td>
+						<td>2026-09-15</td>
+					</tr>
+					<tr>
+						<td>Fuel</td>
+						<td>100</td>
+						<td>Transport</td>
+						<td>2026-09-14</td>
+					</tr>
+					<tr>
+						<td>Movie</td>
+						<td>50</td>
+						<td>Entertainment</td>
+						<td>2026-09-04</td>
+					</tr>
+					<tr>
+						<td>House rent</td>
+						<td>5000</td>
+						<td>Rent</td>
+						<td>2026-09-05</td>
+					</tr>
+					<tr>
+						<td>Internet</td>
+						<td>300</td>
+						<td>Other</td>
+						<td>2026-09-12</td>
+					</tr>
+				</tbody>
+			</table>
+
 			</section>
+			<section>
+				<h3>Budgeting Tips</h3>
+				<iframe width="600" height="330" 
+					src="https://www.youtube.com/watch?v=ONNJJJlIFas" 
+					title="Budget tip video" 
+					frameborder="0" 
+					allowfullscreen>
+				</iframe>
+				<ul>
+					<li>Track your expenses regularly.</li>
+					<li>Set a monthly budget for each category.</li>
+					<li>Look for ways to reduce unnecessary spending.</li>
+				</ul>
+			</section>
+	
 </body>
 </html>
