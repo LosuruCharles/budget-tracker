@@ -5,9 +5,10 @@ body
 	font-family: var(--font-body);
 	color: var(--color-text);
 	padding: 22px;
+	border-color: var(--color-secondary)
 }
 h1{
-	color:var(--color-primary);
+	color:var(--color-b);
 	text-align: center;
 	padding: 22px;
 	font-size: 70px;
@@ -20,7 +21,7 @@ h1{
 }
 	.add-expense-section {
 		background-color: var(--color-bg);
-		color: var(--color-accent);
+		color: var(--color-text);
 		padding: 22px;
 		font-family: var(--font-body);
 		border-radius: 10px;
@@ -45,44 +46,51 @@ h1{
 	margin-top: 20px;
 	padding: 22px;
 	font-size: 18px;
-	border: var(--color-border);
+	border: 2px solid var(--color-b);
 	border-radius: 10px;
+	border-color: var(--color-b);
 }
 /* descendant selector */
 .your-expense td, 
 .your-expense th {
-	border: var(--color-border);
+	border: 1px solid var(--color-accent-hover);
 	padding: 14px 12px;
 	text-align: left;
+	color: var(--color-text);
+	border-color: var(--color-b);
 }
 .your-expense th {
-	background-color: var(--color-bg);
-	color: var(--color-text);
+	background-color: var(--color-secondary);
+	color: var(--color-accent-hover);
 	font-family: var(--font-heading);
 	text-align: left;
+	border: 1px solid var(--color-primary);
 	text-transform: uppercase;
 }
 /* pseudo-class selector based on position: alternating row colors */
 .your-expense tr:nth-child(even) {
 	background-color: var(--color-bg);
+	border-color: var(--color-accent-hover);
 }
 .your-expense tbody tr:hover {
-	background-color: var(--color-bg);
+	background-color: var(--color-b);
+	border: 1 px solid var(--color-b);
+	
 }
 /* focus state for input and select */
 input:focus,
 select:focus {
 	outline: none;
-	border-color: var(--color-accent);
-	box-shadow: var(--color-accent);
+	border-color: var(--color-b);
+	box-shadow: var(--color-text);
 	font-family: var(--font-body);
 }
 button {
 	margin-top: 20px;
 	padding: 15px 25px;
-	border: none;
+	border: var(--color-text);
 	border-radius: 7px;
-	background-color: var(--color-bg);
+	background-color: var(--color-secondary);
 	color: var(--color-text);
 	font-family: var(--font-body);
 	font-size: 15px;
@@ -92,10 +100,12 @@ button {
 :root {
 	--color-bg: #a4a3a1;
 	--color-primary: #1f3a3d;
-	--color-accent: #c98a3e;
+	--color-accent: rgb(127, 189, 127);
 	--color-text: #262622;
 	--color-border: #ddd4f2;
-	--color-acent-hover: #ecd17d;
+	--color-acent-hover: green;
+	--color-b: yellow;
+	--color-secondary: brown;
 
 	--font-heading: "Poppins", serif;
 	--font-body: "Inter", sans-serif;
