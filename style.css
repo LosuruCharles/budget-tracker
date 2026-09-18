@@ -1,23 +1,31 @@
 body
 	{font-family: Arial, sans-serif;
-	background-color: #f4f4f4;
+	background-color: var(--color-accent);
 	margin: 0;
+	font-family: var(--font-body);
+	color: var(--color-text);
 	padding: 22px;
 }
 h1{
-	color:blue;
+	color:var(--color-primary);
 	text-align: center;
 	padding: 15px;
 	font-size: 70px;
-	border: 3px solid beige;
+	font-family: var(--font-heading);
+	border: 3px solid rgb(220, 220, 16);
 	background-color:darkgray;
 	margin-bottom: 22px;
+	border-radius: 11px;
+	margin: 0 auto;
 }
-	.expense-section {
+	.add-expense-section {
 		background-color: #e8f5e9;
-		color:turquoise;
-		padding: 60px;
+		color: var(--color-accent);
+		padding: 10px;
+		font-family: var(--font-body);
 		border-radius: 10px;
+		border: 1px solid grey;
+		margin: 0 auto 18px;
 	}
 	select {
 		display: block;
@@ -29,27 +37,35 @@ h1{
 	}
 
 /* Table-styling */
-table {
+.your-expense {
 	width: 80%;
 	border-collapse: collapse;
+	color: var(--color-text);
 	margin-top: 20px;
-	padding: 20px
+	padding: 18px;
+	font-size: 18px;
+	border: 1px solid black;
+	border-radius: 10px;
 }
 /* descendant selector */
-.expense-section td, .expense-section th {
+.your-expense td, 
+.your-expense th {
 	border: 1px solid #bbb;
-	padding: 12px;
+	padding: 14px 12px;
 	text-align: left;
 }
-.expense-section th {
+.your-expense th {
 	background-color: green;
 	color: beige;
+	font-family: var(--font-heading);
+	text-align: left;
+	text-transform: uppercase;
 }
 /* pseudo-class selector based on position: alternating row colors */
-.expense-section tr:nth-child(even) {
+.your-expense tr:nth-child(even) {
 	background-color:aqua;
 }
-.expense-section tbody tr:hover {
+.your-expense tbody tr:hover {
 	background-color:greenyellow;
 }
 /* focus state for input and select */
@@ -58,6 +74,7 @@ select:focus {
 	outline: none;
 	border-color: turquoise;
 	box-shadow: 0 0 4px turquoise;
+	font-family: var(--font-body);
 }
 button {
 	margin-top: 20px;
@@ -66,6 +83,19 @@ button {
 	border-radius: 7px;
 	background-color: turquoise;
 	color: #fff;
+	font-family: var(--font-body);
 	font-size: 15px;
 	cursor: pointer;
+}
+/* Color pallette */
+:root {
+	--color-bg: #a4a3a1;
+	--color-primary: #1f3a3d;
+	--color-accent: #c98a3e;
+	--color-text: #262622;
+	--color-border: #ddd4f2;
+	--color-acent-hover: #ecd17d;
+
+	--font-heading: "Poppins", serif;
+	--font-body: "Inter", sans-serif;
 }
